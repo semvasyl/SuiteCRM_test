@@ -250,13 +250,15 @@ $crm->auth();
 $crm->moduleCols["Accounts"]["name"]="Accounts";
 $crm->moduleCols["Accounts"]["params"]=array('name','phone_office','website','billing_address_country');
 $crm->moduleCols["Contacts"]["name"]="Contacts";
-$crm->moduleCols["Contacts"]["params"]=array('name','phone_office','website','title','department');
+$crm->moduleCols["Contacts"]["params"]=array('name','phone_office','primary_address_city','website','title','department');
 $crm->moduleCols["Leads"]["name"]="Leads";
 $crm->moduleCols["Leads"]["params"]=array('first_name','last_name','phone_work','primary_address_city','title','department');
 $crm->moduleCols["Tasks"]["name"]="Tasks";
 $crm->moduleCols["Tasks"]["params"]=array('name','status','date_due','created_by');
 $crm->moduleCols["Opportunities"]["name"]="Opportunities";
 $crm->moduleCols["Opportunities"]["params"]=array('name','opportunity_type','amount','	sales_stage');
+$crm->moduleCols["Users"]["name"]="Users";
+$crm->moduleCols["Users"]["params"]=array('user_name','first_name','last_name','status');
 
 
 $crm->GetModuleData("Accounts");
@@ -264,5 +266,6 @@ $crm->GetModuleData("Contacts");
 $crm->GetModuleData("Leads");
 $crm->GetModuleData("Tasks");
 $crm->GetModuleData("Opportunities");
+$crm->GetModuleData("Users");
 
 ?>
